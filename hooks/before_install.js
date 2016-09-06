@@ -4,7 +4,6 @@ module.exports = function(context) {
   }
   var request = require('request');
   var fs = require('fs');
-  var progress = require('request-progress');
   var targz = require('targz');
 
   var Q = context.requireCordovaModule('q');
