@@ -1,3 +1,49 @@
+Version 2.1.1 - November 2016
+=============================
+Resolved Issues:
+  - Fixed an issue which caused many Road Shields to not be displayed when
+    custom styling is active even if the custom styling didn't attempt to style
+    them.
+  - Renamed some symbols which could cause duplicate symbols when using all_load
+    and Firebase.
+  - Resolved a problem where changing any property of polygon, polyline or
+    ground overlay in between taps would cause tap cycling to break.  This could
+    make it seem impossible to tap through to items underneath.
+  - Fixed cameraForBounds:insets: to respect the currently set min and max zoom
+    restrictions.
+
+Version 2.1.0 - September 2016
+==============================
+Features:
+  - This release introduces custom styling of the base map. You can use a JSON
+    style declaration to create a `GMSMapStyle` instance and pass it to the
+    `mapStyle` property, to change the visual display of features like roads,
+    parks, businesses, and other points of interest. You can use styling to
+    emphasize particular components of the map, or make the map complement the
+    style of your app. Styling works only on the `kGMSTypeNormal` map type.
+  - It is now possible to apply "night mode" to maps, by applying custom styles.
+  - Business points of interest (POIs) now appear by default on the map,
+    provided that the map type is `kGMSTypeNormal`. Prior to this release,
+    local POIs appeared on the map, but not business POIs). Business POIs
+    represent businesses such as shops, restaurants, hotels, and more.
+  - You can disable POIs on a map by using map styling.
+  - With the addition of business points of interest, there is a new optional
+    method `didTapPOIWithPlaceID` on `GMSMapViewDelegate` which provides
+    notification when a POI has been tapped.
+
+Resolved Issues:
+  - Renamed the `canGoOffline` selector internally, to avoid triggering false
+    positives during submission to the Apple app store.
+  - The `iconView` property of `GMSMarker` is now correctly marked as nullable.
+  - The renderer has been updated to avoid a race condition which would
+    cause rendering to not stop in time when an app transitions to background.
+  - `GMSPath` `initFromEncodedPath` now returns nil for invalid input
+    (previously invalid input could result in a crash).
+  - An additional method was added to `GMSMapView`, which compares two camera
+    positions to determine whether they are close enough to render identically.
+  - `GMSCircle` will now always draw at least a dot for small radius circles,
+    including radius 0.
+
 Version 2.0.1 - July 2016
 =========================
 
@@ -8,7 +54,7 @@ Version 2.0.0 - July 2016
 =========================
 
 Improvements:
-  ! This release splits the Places API from the Maps SDK. Previously, if you
+  - This release splits the Places API from the Maps SDK. Previously, if you
     wanted to use the Places API you had to include all of GoogleMaps. As a
     result of the split, the final size of the Places API binary is 70% smaller
     than the previous combined binary. If you are using only the Maps SDK you
@@ -256,7 +302,7 @@ Resolved Issues:
   - Improved handling of application background state transition
 
 Notes:
-  ! In order to improve compatibility with Swift, two geometry library
+  - In order to improve compatibility with Swift, two geometry library
     functions have been renamed to avoid function overloading
     The new names are GMSGeometryIsLocationOnPathTolerance and
     GMSStyleSpansOffset
@@ -321,7 +367,7 @@ Resolved Issues:
   - cameraForBounds:insets: on GMSMapView now correctly accounts for padding
 
 Notes:
-  ! To align with other Google Maps APIs, GMSMapView no longer provides helper
+  - To align with other Google Maps APIs, GMSMapView no longer provides helper
     methods to retrieve previously added overlays, such as -markers, -polylines
     and -groundOverlays
 
@@ -347,9 +393,9 @@ Features:
   - Added the ability to restrict min and max zoom on GMSMapView
   - Added opacity on GMSTileLayer
   - Added opacity on GMSMarker, which may be animated
-  ! Updated types within the SDK and used float or double instead of CGFloat
+  - Updated types within the SDK and used float or double instead of CGFloat
     in cases where it was more appropriate
-  ! Core Animation on GMSMapView now requires model values to be set
+  - Core Animation on GMSMapView now requires model values to be set
 
 Resolved Issues:
   - Marker info windows and tappable regions now rotate correctly with markers
@@ -366,9 +412,9 @@ Resolved Issues:
 Version 1.5.0 - September 2013
 ==============================
 Features:
-  ! This release officially supports iOS 7, and requires iOS 6.0 or later (iOS
+  - This release officially supports iOS 7, and requires iOS 6.0 or later (iOS
     5.1 is no longer supported).
-  ! The 'animated' field on GMSMarker is now known as 'appearAnimation', and
+  - The 'animated' field on GMSMarker is now known as 'appearAnimation', and
     may be set to kGMSMarkerAnimationNone (default) or kGMSMarkerAnimationPop
   - The Google Maps SDK for iOS now ships with an armv7s slice
   - New features for GMSMarker instances
@@ -479,11 +525,11 @@ Resolved Issues:
   - Resolved an issue where active gestures could cause a GMSMapView to not
     be released until deceleration completed
   - Info windows no longer allow taps to pass through them
-  ! Accessibility elements on GMSMapView are now hidden by default; you can
+  - Accessibility elements on GMSMapView are now hidden by default; you can
     enable via accessibilityElementsHidden
 
 Notes:
-  ! To align with other Google Maps APIs, GMSGroundOverlay no longer supports
+  - To align with other Google Maps APIs, GMSGroundOverlay no longer supports
     the zoomLevel property. You can use the helper method
     groundOverlayWithPosition:icon:zoomLevel: to migrate existing code
 
@@ -527,13 +573,13 @@ Resolved Issues:
 Version 1.2.0 - April 2013
 ==========================
 Features:
-  ! Removed GMS...Options classes in favor of creating overlays directly
+  - Removed GMS...Options classes in favor of creating overlays directly
     and setting their 'map' property
-  ! Map overlays (GMSMarker, GMSPolyline, others) now inherit from a shared
+  - Map overlays (GMSMarker, GMSPolyline, others) now inherit from a shared
     GMSOverlay class
-  ! GMSPolyline now has 'strokeWidth' and 'strokeColor' to match GMSPolygon,
+  - GMSPolyline now has 'strokeWidth' and 'strokeColor' to match GMSPolygon,
     rather than 'width' and 'stroke'
-  ! More helper methods on GMSCoordinateBounds, 'including' renamed to
+  - More helper methods on GMSCoordinateBounds, 'including' renamed to
     'includingCoordinate', added 'includingBounds'
   - Added GMSPolygon and GMSCircle overlays
   - A GMSMarker may be animated when added to a map
@@ -566,7 +612,7 @@ Resolved Issues:
 Version 1.1.2 - March 2013
 ==========================
 Resolved Issues:
-  ! Updated the SDK to use libc++ instead of libstdc++
+  - Updated the SDK to use libc++ instead of libstdc++
   - Improved support for including a GMSMapView and GLKView in the same app
 
 Version 1.1.1 - March 2013
@@ -586,7 +632,7 @@ Resolved Issues:
 Version 1.1.0 - February 2013
 =============================
 Features:
-  ! The points of a GMSPolyline (and GMSPolylineOptions) are now specified as
+  - The points of a GMSPolyline (and GMSPolylineOptions) are now specified as
     a GMSPath and built via a GMSMutablePath, rather than addVertex: etc
   - GMSPolyline may now be specified as geodesic
   - animateToCameraPosition: method on GMSMapView
@@ -603,7 +649,7 @@ Resolved Issues:
 Version 1.0.2 - January 2013
 ============================
 Features:
-  ! GMSCamera (struct) has been dropped in favor of GMSCameraPosition * (objc
+  - GMSCamera (struct) has been dropped in favor of GMSCameraPosition * (objc
     class), supports finer control of bearing and viewing angle
   - Added GMSUISettings to control gesture availability
   - Added GMSGroundOverlay/GMSGroundOverlayOptions for basic ground overlay
@@ -622,6 +668,3 @@ Version 1.0.1 - December 2012
 Initial release alongside Google Maps for iOS.
 Support for 3D maps, rotation, tilt, 3D buildings, markers, polylines,
 satellite and terrain tiles, traffic data, and other features.
-
-
-* Items denoted with an '!' may indicate a backwards incompatible change.
