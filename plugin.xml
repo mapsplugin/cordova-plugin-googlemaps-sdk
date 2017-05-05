@@ -17,8 +17,8 @@
     <framework src="CoreText.framework" />
     <framework src="GLKit.framework" />
     <framework src="ImageIO.framework" />
-    <framework src="libc++.tbd" />
-    <framework src="libz.tbd" />
+    <framework src="libc++.dylib" />
+    <framework src="libz.dylib" />
     <framework src="OpenGLES.framework" />
     <framework src="QuartzCore.framework" />
     <framework src="SystemConfiguration.framework" />
