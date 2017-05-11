@@ -26,6 +26,6 @@
     <framework src="Base/Frameworks/GoogleMapsBase.framework" custom="true"/>
     <framework src="Maps/Frameworks/GoogleMaps.framework" custom="true"/>
     <framework src="Maps/Frameworks/GoogleMapsCore.framework" custom="true"/>
-    <resource-file src="Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"/>
+    <resource-file src="Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle"/>
   </platform>
 </plugin>
