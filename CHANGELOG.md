@@ -1,3 +1,24 @@
+Version 2.5.0 - October 2017
+============================
+Features:
+  - Added the paddingAdjustmentBehavior property to GMSMapView. This property
+    controls how safe area insets interact with padding.
+
+Improvements:
+  - Improved iOS 11 & iPhone X support.
+  - GMSMapView and GMSPanoramaView managed subviews are now positioned within
+    iPhone X device safe areas by default.
+
+Resolved Issues:
+  - Fixed an issue where Xcode 9's Main Thread Checker warns that [UIApplication
+    applicationState] is being called on a background thread.
+  - Fixed an issue where setting either navigationLinksHidden or
+    streetNamesHidden to YES still resulted in the navigation links and street
+    names appearing.
+
+Note:
+  - Support for Xcode 7.3 has been dropped. The new minimum is Xcode 8.0.
+
 Version 2.4.0 - August 2017
 ===========================
 Note:
