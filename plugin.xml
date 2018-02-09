@@ -16,6 +16,7 @@
     <framework src="CoreLocation.framework" />
     <framework src="CoreTelephony.framework" />
     <framework src="CoreText.framework" />
+    <framework src="CoreImage.framework" />
     <framework src="GLKit.framework" />
     <framework src="ImageIO.framework" />
     <framework src="libc++.tbd" />
