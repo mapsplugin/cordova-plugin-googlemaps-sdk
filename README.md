@@ -1,6 +1,6 @@
 # Google Maps SDK for iOS for Cordova
 
-This plugin installs Google Maps SDK for iOS (v2.7.0) into your project **without CocoaPods**.
+This plugin installs Google Maps SDK for iOS (v3.8.0) into your project **without CocoaPods**.
 
 # License and Terms of Service (for this plugin)
 
