@@ -1,3 +1,8 @@
+Version 3.10.0-beta1 - Jun 1, 2020
+==========================
+
+  Please check https://developers.google.com/maps/documentation/ios-sdk/v310-beta
+
 Version 3.9.0 - May 26, 2020
 ==========================
 

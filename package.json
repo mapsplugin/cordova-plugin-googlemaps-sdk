@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-googlemaps-sdk",
-  "version": "3.9.0",
+  "version": "3.10.0-beta1",
   "description": "Google Maps SDK for iOS for Cordova (files are copied from Google)",
   "cordova": {
     "id": "cordova-plugin-googlemaps-sdk",
