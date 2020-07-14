@@ -1,73 +1,82 @@
+Version 3.9.0 - May 26, 2020
+==========================
+
+Bug fixes:
+
+  - Fixed issue where apps would crash when resizing map view in some circumstances (Issue 152145655).
+  - Fixed issue where apps would crash when particular custom styles were used (Issue 73344082).
+  - Some types of camera move animations were skipped if initiated before the map view had gone through a layout cycle (Issue 80065881).
+
 Version 3.8.2 - May 18, 2020
 ==========================
 Bug fixes:
 
-Fixed an issue where apps using the Maps SDK for iOS would crash upon startup.
+  - Fixed an issue where apps using the Maps SDK for iOS would crash upon startup.
 
 Version 3.8.0 - February 18, 2020
 ==========================
 
-Version bump, no changes. This version is functionally identical to v.3.7.0.
+  - Version bump, no changes. This version is functionally identical to v.3.7.0.
 
 Note:
 
-  To build apps using the Maps SDK for iOS, the current minimum IDE version supported is Xcode 11.0.
+  - To build apps using the Maps SDK for iOS, the current minimum IDE version supported is Xcode 11.0.
 
 Version 3.7.0 - December 2, 2019
 ==========================
-  Version bump, minor bug fixes only. This version is functionally identical to v.3.6.0.
+  - Version bump, minor bug fixes only. This version is functionally identical to v.3.6.0.
 
 Version 3.6.0 - October 28, 2019
 ==========================
-  Version bump, no changes. This version is functionally identical to v.3.5.0.
+  - Version bump, no changes. This version is functionally identical to v.3.5.0.
 
 Version 3.5.0 - October 08, 2019
 ==========================
 Resolved Issues:
 
-  Fixed missing info window title in dark mode on iOS 13 (Issue 137173762).
+  - Fixed missing info window title in dark mode on iOS 13 (Issue 137173762).
 
 Version 3.4.0 - September 04, 2019
 ==========================
-  Version bump, no changes. This version is functionally identical to v.3.3.0.
+  - Version bump, no changes. This version is functionally identical to v.3.3.0.
 
 Version 3.3.0 - July 29, 2019
 ==========================
 Features:
 
-  Added the SDKLongVersion method, which returns the long version of the Maps SDK for iOS.
+  - Added the SDKLongVersion method, which returns the long version of the Maps SDK for iOS.
 
 Resolved Issues:
 
-  Fixed a long-standing intermittent crash on startup related to CoreData cache (Issue 111132807).
+  - Fixed a long-standing intermittent crash on startup related to CoreData cache (Issue 111132807).
 
 Version 3.2.0 - July 8, 2019
 ==========================
 Resolved Issues:
 
-  Fixed an issue when rendering polygons that would result in incorrect shapes being drawn.
-  Fixed a crashing bug that occurred occasionally when removing overlays from a map.
+  - Fixed an issue when rendering polygons that would result in incorrect shapes being drawn.
+  - Fixed a crashing bug that occurred occasionally when removing overlays from a map.
 
 Improvements:
 
-  Reduced the amount of work done when the map is hidden by other views to improve CPU usage.
+  - Reduced the amount of work done when the map is hidden by other views to improve CPU usage.
 
 Version 3.1.0 - April 16, 2019
 ==========================
 
 Resolved Issues:
 
-  Indoor maps are now styled to match outdoor maps (Issue 35830576).
-  Fixes an issue where a crash could occur if markup entities were added to the map before the map was ready to draw.
+  - Indoor maps are now styled to match outdoor maps (Issue 35830576).
+  - Fixes an issue where a crash could occur if markup entities were added to the map before the map was ready to draw.
 
 Version 3.0.0 - January, 2019
 ==========================
 
-  Support for iOS 8.0 has been dropped. The new minimum is iOS 9.0.
+  - Support for iOS 8.0 has been dropped. The new minimum is iOS 9.0.
 
 Known Issues:
 
-  There is an occasional rendering bug when using the polygon overlay feature.
+  - There is an occasional rendering bug when using the polygon overlay feature.
 
 Version 2.7.0 - April 2018
 ==========================
